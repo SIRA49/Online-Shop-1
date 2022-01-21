@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>カフェショップ</title>
-ahsdsoodo
+
 
 <link rel="stylesheet" href="css/style.css">
 
