@@ -46,7 +46,8 @@
 <section>
 	
 <h2 class="c">メニュー</h2>
-	
+<main id="main">
+
 <?php
   if (empty($tid) == true) {
     $sql = "SELECT bean_name, type_name, dayfee, main_image, product_no
@@ -88,7 +89,7 @@
 	  }
 	?>
 	 </table>
-  
+</main>
 
 <section class="ofh box">
 	
