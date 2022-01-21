@@ -95,8 +95,8 @@ ul.icon img {
 
 
 
-#main img.small {
-	width: 180px;
+.small {
+	width: 180px; !important;
  }
 
 #main {
