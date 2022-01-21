@@ -46,7 +46,7 @@
 <section>
 	
 <h2 class="c">メニュー</h2>
-
+<main id="ma">
 
 <?php
   if (empty($tid) == true) {
@@ -89,7 +89,7 @@
 	  }
 	?>
 	 </table>
-
+</main>
 
 <section class="ofh box">
 	

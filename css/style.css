@@ -457,3 +457,7 @@ dl.menu {
 dl.menu dd {
 	margin: 0px 10px;
 }
+
+#main img.small {
+	width: 180px;
+ }
