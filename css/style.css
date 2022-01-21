@@ -1,0 +1,459 @@
+@charset "utf-8";
+
+
+
+@import url(slide.css);
+
+
+
+
+@keyframes frame1 {
+	0% {opacity: 0;transform: scaleX(0);}
+	100% {opacity: 1;transform: scaleX(1);}
+}
+
+
+
+body,html {height: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #fff;	
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	
+	font-size: 16px;	
+	line-height: 2;		
+	background: #000;
+}
+h1,h2,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+video {max-width: 100%;}
+iframe {width: 100%;}
+
+
+a {
+	color: #fff;		
+	transition: 0.5s;
+}	
+a:hover {
+	color: #ffd200;			
+		
+}
+
+header {
+	position: fixed;	
+	left: 0px;			
+	top: 0px;			
+	width: 15%;			
+	height: 100%;		
+	text-align: center;	
+
+	background: rgba(128,0,0,0.6);	
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.5) inset;
+}
+
+.home header {
+	animation-fill-mode: both;
+	animation-duration: 0.3s;		
+	animation-iteration-count:1;	
+	animation-delay: 4.5s;			
+	animation-name: frame1;			
+}
+
+header:hover {
+	overflow: auto;
+}
+
+
+ul.icon li {
+	display: inline;	
+}
+
+ul.icon img {
+	width: 30px;		
+	margin: 5px;	
+}
+
+
+
+
+#menubar {
+	margin: 20px 0px;	
+}
+
+#menubar li a {
+	display:  block;text-decoration: none;
+	padding: 20px 5px;	
+	line-height: 1.5;	
+}
+
+#menubar li a:hover, #menubar li.current a {
+	background: #fff;	
+	color: #000;
+}
+
+
+
+
+
+#main {
+	width: 75%;			
+	padding: 100px 0;	
+	overflow: auto;overflow-x: hidden;
+	position: absolute;
+	left: 20%;
+	text-shadow: 1px 1px #000;	
+}
+
+.home #main {
+	padding: 0;
+	animation-fill-mode: both;
+	animation-duration: 0.3s;		
+	animation-iteration-count:1;	
+	animation-delay: 4.5s;			
+	animation-name: frame1;			
+	bottom: 50px;	
+}
+
+#main h2 {
+	clear: both;
+	margin-bottom: 20px;	
+	padding: 0 20px;		
+	font-size: 30px;		
+	border-bottom: 1px solid #fff;	
+}
+
+#main h3 {
+	clear: both;
+	margin-bottom: 20px;	
+	padding: 0 20px;		
+	font-size: 24px;		
+}
+
+#main p {
+	padding: 0px 0px 20px 40px;	
+}
+
+#main h2 + p,
+#main h3 + p {
+	margin-top: -10px;
+}
+#main section + section {
+	margin-top: 30px;
+}
+#main p + p {
+	margin-top: -8px;
+}
+
+
+.box1  {
+	text-shadow: none;position: relative;
+	background: #fff;	/*背景色*/
+	color: #666;		/*文字色*/
+	line-height: 1.5;	/*行間*/
+}
+
+.box1 h4 {
+	color: #ff0000;
+}
+
+.box1 p {
+	padding: 0 !important;
+}
+
+
+.mark {
+	position: absolute;
+	left: -10px;	
+	top: -10px;		
+	background: #ff0000;	
+	color: #fff;			
+	font-size: 12px;		
+	width: 60px;			
+	line-height: 60px;		
+	border-radius: 50%;		
+	text-align: center;		
+		
+}
+.box1::after {content: "";display: block;clear: both;}
+
+
+
+.box1 {
+	margin: 0 2% 20px;		
+	padding: 3%;			
+}
+
+.box1 figure {
+	width: 20%;		
+	float: left;	
+	margin-right: 3%;	
+}
+
+.box1 h4 {
+	font-size: 150%;	
+	margin-bottom: 10px;	
+}
+
+.box1 p {
+}
+
+
+
+
+
+
+
+#new {
+	background: rgba(0,0,0,0.5);	
+	padding: 3%;					
+}
+
+
+
+#new dt {
+	float: left;	
+	width: 9em;		
+	letter-spacing: 0.1em;
+}
+
+#new dd {
+	padding-left: 9em;	
+}
+
+
+
+.ta1 caption {
+	border: 1px solid #fff;	
+	border-bottom: none;	
+	text-align: left;		
+	font-weight: bold;		
+	padding: 10px;			
+	background: rgba(0,0,0,0.5);	
+}
+
+.ta1 .tamidashi {
+	 width: auto;
+	background: rgba(0,0,0,0.5);	
+	text-align: left;		
+}
+
+.ta1 {
+	table-layout: fixed;
+	width: 100%;
+	margin: 0 auto 20px;
+}
+.ta1, .ta1 td, .ta1 th {
+	border: 1px solid #fff;	
+	padding: 10px 15px;	
+	word-break: break-all;
+}
+
+.ta1 th {
+	width: 140px;		
+	text-align: center;	
+}
+
+
+
+.newicon {
+	background: #F00;	
+	color: #FFF;		
+	font-size: 70%;		
+	line-height: 1.5;
+	padding: 2px 5px;
+	border-radius: 2px;
+	margin: 0px 5px;
+	vertical-align: text-top;
+}
+
+
+
+input[type="submit"].btn,
+input[type="button"].btn,
+input[type="reset"].btn {
+	padding: 5px 20px;		
+	border-radius: 3px;		
+	background: #000;	
+	color: #fff;
+}
+
+input,textarea {
+	outline: none;background: transparent;
+	border: 1px solid #fff;	
+	color: #fff;	
+}
+
+input:focus,textarea:focus {
+	background: rgba(0,0,0,0.7);
+}
+
+
+
+
+
+
+.box {
+	padding: 20px;					
+	background: rgba(0,0,0,0.6);	
+	border: 1px solid rgba(255,255,255,0.3);	
+}
+
+
+
+dl.menu {
+	margin: 0px 10px;	
+}
+
+dl.menu dt {
+	 background: rgba(0,0,0,0.7);	
+	 border-radius: 5px;			
+	 padding: 5px 10px;				
+	 border: 1px solid rgba(255,255,255,0.3);	
+	 text-align: center;			
+}
+dl.menu dd + dt {
+	margin-top: 10px;
+}
+
+dl.menu dd {
+	overflow: hidden;
+	margin: 0px 20px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+dl.menu dd .price {
+	float: right;	
+}
+
+
+.look {background: rgba(0,0,0,0.5);border: 1px solid rgba(255,255,255,0.3);padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px;}
+.clear {clear: both;}
+.color1, .color1 a {color: #ffd200;}
+.pr {font-size: 10px;}
+.wl {width: 96%;}
+.ws {width: 50%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+img.fr {float: right;margin: 10px;}
+img.fl {float: left;margin: 10px;}
+.fr {float: right;}
+.fl {float: left;}
+.big1 {font-size: 28px;letter-spacing: 0.1em;}
+.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
+.sh {display: none;}
+.clearfix::after {content: "";display: block;clear: both;}
+.half {width: 50%;float: left;}
+.ofh {overflow: hidden;}
+
+
+
+@media screen and (max-width:900px){
+
+
+
+
+
+#main {
+	width: 94%;	
+	left: 3%;	
+}
+
+
+
+
+#menubar-s nav li:first-child a {
+	background: #000;	
+}
+#menubar-s nav li:first-child img {
+	width: 100px;	
+}
+
+
+ul.icon {
+	border-bottom: 1px solid #fff;	
+}
+
+
+
+.box1, .box1 h4, .box1 p{
+	font-size: 3.2vw !important;		
+}
+
+.mark {
+	left: auto;
+	right: 0px;
+	font-size: 10px;		
+	width: 50px;			
+	line-height: 50px;		
+	transform: rotate(20deg);	
+}
+
+
+
+
+body {
+	font-size: 12px;
+	font-size: 2.93vw;
+}
+
+
+
+#main h2, #main h3 {
+	font-size: 20px;	
+	line-height: 1.4;	
+	padding: 0;
+}
+
+#main p {
+	padding: 0px 0px 20px;	
+}
+
+
+
+.box1 figure,.box2 figure {
+	width: 30%;
+}
+
+
+
+
+
+#new dl {
+	padding: 0;
+}
+
+
+.ta1 caption, .ta1 .tamidashi {
+	padding: 5px;
+}
+
+.ta1 th {
+	width: 100px;
+	padding: 5px;
+}
+
+.ta1 td {
+	width: auto;
+	padding: 5px;
+}
+
+
+
+
+.box {
+	padding: 10px;	
+}
+
+
+
+dl.menu {
+	margin: 5px;
+}
+
+dl.menu dd {
+	margin: 0px 10px;
+}

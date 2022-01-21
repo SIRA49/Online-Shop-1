@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+
+@keyframes slide1 {
+	0% {opacity: 0;transform: scale(1);}
+	10% {opacity: 0;}
+	20% {opacity: 1;}
+	50% {opacity: 1;}
+	60% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.2);}
+}
+@keyframes slide2 {
+	0% {opacity: 0;transform: scale(1);}
+	35% {opacity: 0;}
+	45% {opacity: 1;}
+	72% {opacity: 1;}
+	82% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.2);}
+}
+@keyframes slide3 {
+	0% {opacity: 0;transform: scale(1);}
+	58% {opacity: 0;}
+	68% {opacity: 1;}
+	83% {opacity: 1;}
+	93% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.2);}
+}
+
+
+#mainimg {
+	clear: left;
+	text-indent: -9999px;
+	position: fixed;
+	top: 0px;left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+
+.slide0,.slide1,.slide2,.slide3 {width: 100%;height: 100%;}
+.slide1,.slide2,.slide3 {
+	animation-timing-function: linear;
+	animation-duration: 15s;	
+	animation-iteration-count:infinite;		
+	position: absolute;left:0px;top:0px;width: 100%;height: 100%;
+	animation-fill-mode: both;
+	animation-delay: 1s;
+}
+
+.slide0 {
+	background: #000 url(../images/logo_slide.png) no-repeat right bottom / cover;
+	position: relative;
+}
+
+.slide1 {
+	background: url(../images/1.jpg) no-repeat center center/cover;
+	animation-name: slide1;		
+}
+
+.slide2 {
+	background: url(../images/2.jpg) no-repeat center center/cover;
+	animation-name: slide2;		
+}
+
+.slide3 {
+	background: url(../images/3.jpg) no-repeat center center/cover;
+	animation-name: slide3;		
+}
+
+
+
+.slide-sub1 {width: 100%;height: 100%;}
+
+/*slide-sub1*/
+.slide-sub1 {
+	background: url(../images/subimg1.jpg) no-repeat center center/cover;
+}
