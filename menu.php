@@ -46,7 +46,6 @@
 <section>
 	
 <h2 class="c">メニュー</h2>
-<main id="ma">
 
 <?php
   if (empty($tid) == true) {
@@ -89,31 +88,6 @@
 	  }
 	?>
 	 </table>
-</main>
-
-<section class="ofh box">
-	
-<h2 class="c">メニュー（一覧）</h2>
-
-<div class="half">
-
-<dl class="menu">
-<dt>ブレンド</dt>
-	<dd>自家製ブレンド　　250ｇ<span class="price">750円</span></dd>
-	<dd>新春ブレンド　　　250ｇ<span class="price">940円</span></dd>
-	
-<dt>ストレート豆</dt>
-	<dd>コロンビア　　　　250ｇ<span class="price">830円</span></dd>
-	<dd>ブラジル　　　　　250ｇ<span class="price">860円</span></dd>
-	<dd>モカ　　　　　　　250ｇ<span class="price">960円</span></dd>
-	<dd>グァテマラ　　　　250ｇ<span class="price">830円</span></dd>
-	<dd>ブルーマウンテン　250ｇ<span class="price">4590円</span></dd>
-</dl>
-
-</div>
-
-
-</section>
 
 </div>
 
