@@ -62,21 +62,20 @@
   $cnt = mysqli_num_rows($result);
   if ($cnt == 0) {
     echo "<b>ご指定のお部屋は只今準備ができておりません</b>";  
-  } else { 
-?>
+  } else {
+	?>
 
-<p>
-    コーヒー嫌いです。
-</p>
-
-<table>
-            <th>お部屋名称</th>
-            <th>お部屋タイプ</th>
-            <th>一泊料金<br>（部屋単位）</th>
-            <th colspan="2">お部屋イメージ</th>
-</table>
- }
-
+	<p>
+		コーヒー嫌いです。
+	</p>
+	
+	<table>
+				<th>お部屋名称</th>
+				<th>お部屋タイプ</th>
+				<th>一泊料金<br>（部屋単位）</th>
+				<th colspan="2">お部屋イメージ</th>
+	</table>
+  }
 
 <section class="ofh box">
 	
