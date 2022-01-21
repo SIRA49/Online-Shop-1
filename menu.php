@@ -42,9 +42,7 @@
         <p>配合にはコロンビア,ブラジル,モカ,グァテマラを使用しております。</p>
         
 	<span class="mark">人気</span>
-	</div>
-
-	<div class="box1 ブレンド">
+	
 	<figure><img src="images/b1.jpg" alt=""></figure>
 	<h4>新春ブレンド　250ｇ　940円</h4>
 	<p>良質な豆を使用した新春にふさわしい、超買い得ブレンドです♪</p>
