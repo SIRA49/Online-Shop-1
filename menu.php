@@ -62,20 +62,33 @@
   $cnt = mysqli_num_rows($result);
   if ($cnt == 0) {
     echo "<b>ご指定のお部屋は只今準備ができておりません</b>";  
-  } else {
+} else {
 	?>
-
-	<p>
-		コーヒー嫌いです。
-	</p>
-	
-	<table>
-				<th>お部屋名称</th>
-				<th>お部屋タイプ</th>
-				<th>一泊料金<br>（部屋単位）</th>
-				<th colspan="2">お部屋イメージ</th>
-	</table>
-  }
+			  <h3>自慢のコーヒー豆をご紹介</h3>
+			  <p>
+				コーヒー大っ嫌い
+			  </p>
+			  <table>
+				<th>コーヒー豆名</th>
+				<th>タイプ</th>
+				<th>科学<br>（100g単位）</th>
+				<th>イメージ写真</th>
+	<!-- ここにPHPスクリプトを埋め込む -->          
+	<?php
+		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+		  echo "<tr>";
+		  echo "<td>{$row['bean_name']}</td>";
+		  echo "<td>{$row['type_name']}</td>";
+		  $roomfee = number_format($row['dayfee']);
+		  echo "<td class='number'>&yen; {$roomfee}</td>";
+		  echo "<td><img class='small' src='./images/{$row['main_image']}'></td>";
+		  echo "<td><a href='./roomDetail.php?rno={$row['bean_no']}'>詳細</a></td>";
+		  echo "</tr>";
+		}
+	  }
+	?>
+	 </table>
+  
 
 <section class="ofh box">
 	
