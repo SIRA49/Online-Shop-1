@@ -50,6 +50,7 @@
 
 <aside id="mainimg">
 <div class="slide0">slide0</div>
+<div class="slide0">slide1</div>
 </aside>
 
 </body>
