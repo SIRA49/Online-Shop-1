@@ -45,16 +45,6 @@
 </div>
 
 
-<aside id="mainimg">
-<div class="slide0">slide0</div>
-<div class="slide1">slide1</div>
-<div class="slide2">slide2</div>
-<div class="slide3">slide3</div>
-</aside>
-
-
-
-
 
 </body>
 </html>

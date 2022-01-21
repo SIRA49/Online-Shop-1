@@ -13,7 +13,7 @@
 
 <body>
 <header>
-<h1 id="logo"><a href="index.php"><img src="images/logo.png" alt=""></a></h1>
+<h1 id="logo"><a href="index1.php"><img src="images/logo.png" alt=""></a></h1>
   
 <?php include("./topmenu.php"); ?>
 
