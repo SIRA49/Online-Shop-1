@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>カフェショップ/title>
+<title>カフェショップ</title>
 
 
 <link rel="stylesheet" href="css/style.css">
