@@ -95,16 +95,7 @@ ul.icon img {
 
 
 
-.image {
-    width: 25%;
-}
-.thumbnail {
-    width: 100%;
-    margin-bottom: 15px;
-}
-.thumbnail img {
-    width: 100%;
-}
+
 
 #main {
 	width: 75%;			
@@ -205,7 +196,8 @@ ul.icon img {
 	margin-bottom: 10px;	
 }
 
-
+.box1 p {
+}
 
 
 
