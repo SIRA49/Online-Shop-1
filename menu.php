@@ -37,13 +37,12 @@
 </ul>
 </header>
 
-<div id="contents">
 
 <div id="main">
 
 
 
-<section>
+<
 	
 <h2 class="c">メニュー</h2>
 
@@ -90,7 +89,6 @@
 	
 	</table>
 	</div>
-</div>
 
 
 
