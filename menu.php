@@ -42,6 +42,8 @@
 	
 <h2 class="c">メニュー</h2>
 
+
+<div style="image">
 <?php
   if (empty($tid) == true) {
     $sql = "SELECT bean_name, type_name, dayfee, main_image, product_no
@@ -76,7 +78,7 @@
 		  echo "<td>{$row['type_name']}</td>";
 		  $roomfee = number_format($row['dayfee']);
 		  echo "<td class='number'>&yen; {$roomfee}</td>";
-		  echo "<td><figure><img class='small' src='./images/{$row['main_image']}'></figure></td>";
+		  echo "<td><a class='thumbnail' href='./images/{$row['main_image']}' target='_blank'><img src='./images/{$row['main_image']}'></a></td>";
 		  echo "<td><a href='./roomDetail.php?rno={$row['product_no']}'>詳細</a></td>";
 		  echo "</tr>";
 		}
@@ -84,7 +86,7 @@
 	?>
 	
 	</table>
-
+	</div>
 
 
 
