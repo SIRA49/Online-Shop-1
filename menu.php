@@ -1,3 +1,17 @@
+<?php
+  if (empty($_GET["tid"]) == true) {
+      $tid = "";
+  } else {
+      $tid = htmlspecialchars($_GET["tid"]);
+  }
+  require_once('./dbConfig.php');
+  $link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+  if ($link == null) {
+    die("接続に失敗しました");
+  }
+  mysqli_set_charset($link, "utf8");
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -33,6 +47,24 @@
 	
 <h2 class="c">メニュー</h2>
 	
+<?php
+  if (empty($tid) == true) {
+    $sql = "SELECT bean_name, type_name, dayfee, main_image, product_no
+      FROM cafe, cafe_type 
+      WHERE cafe.type_id = cafe_type.type_id";
+  } else {
+    $sql = "SELECT bean_name, type_name, dayfee, main_image, product_no
+      FROM cafe, cafe_type 
+      WHERE cafe.type_id = cafe_type.type_id
+      AND cafe.type_id = {$tid}"; 
+  }
+  $result = mysqli_query($link, $sql);
+  $cnt = mysqli_num_rows($result);
+  if ($cnt == 0) {
+    echo "<b>ご指定のお部屋は只今準備ができておりません</b>";  
+  } else {
+?>
+
 <h3 class="c">自家製ブレンド　</h3>
 
 	<div class="box1 ブレンド">
