@@ -76,7 +76,7 @@
 		  echo "<td>{$row['type_name']}</td>";
 		  $roomfee = number_format($row['dayfee']);
 		  echo "<td class='number'>&yen; {$roomfee}</td>";
-		  echo "<td><img class='small' src='./images/{$row['main_image']}'></td>";
+		  echo "<td><figure><img class='small' src='./images/{$row['main_image']}'></figure></td>";
 		  echo "<td><a href='./roomDetail.php?rno={$row['product_no']}'>詳細</a></td>";
 		  echo "</tr>";
 		}
