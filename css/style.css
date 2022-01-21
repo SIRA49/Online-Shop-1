@@ -498,3 +498,7 @@ dl.menu dd {
   #main table td.number{
 	text-align: right;
   }
+
+  #main img.small {
+	width: 180px;
+  }
