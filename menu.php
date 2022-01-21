@@ -39,6 +39,7 @@
 
 <div id="contents">
 
+<div id="main">
 
 
 
@@ -88,7 +89,7 @@
 	?>
 	
 
-
+	</div>
 </div>
 
 
