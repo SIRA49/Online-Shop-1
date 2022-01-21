@@ -12,15 +12,10 @@
 
 <body>
 <header>
-<h1 id="logo"><a href="bwz.html"><img src="images/logo.png" alt=""></a></h1>
-<nav id="menubar">
-<ul>
-<li class="current"><a href="bwz.html">ホーム</a></li>
-<li><a href="about.html">お店情報</a></li>
-<li><a href="menu.html">メニュー</a></li>
-<li><a href="contact.html">ご予約・お問合せ</a></li>
-</ul>
-</nav>
+<h1 id="logo"><a href="index.php"><img src="images/logo.png" alt=""></a></h1>
+
+<?php include("./topmenu.php"); ?>  
+
 <ul class="icon">
 <li><a href="#"><img src="images/icon_facebook.png" alt="Facebook"></a></li>
 <li><a href="#"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
