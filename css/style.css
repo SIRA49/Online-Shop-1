@@ -458,6 +458,10 @@ dl.menu dd {
 	margin: 0px 10px;
 }
 
+#main img.small {
+	width:  10px;
+	height: 10px;
+  }
 
 #main table {
 	width: 100%;
@@ -499,7 +503,3 @@ dl.menu dd {
 	text-align: right;
   }
 
-  #main img.small {
-	width:  10px;
-	height: 1000px;
-  }
