@@ -95,7 +95,9 @@ ul.icon img {
 
 
 
-
+#main img.small {
+	width: 180px;
+ }
 
 #main {
 	width: 75%;			
@@ -457,7 +459,3 @@ dl.menu {
 dl.menu dd {
 	margin: 0px 10px;
 }
-
-img.small {
-	width: 180px;
- }
