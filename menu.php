@@ -38,7 +38,7 @@
 </header>
 
 
-<div id="main">
+
 	
 <h2 class="c">メニュー</h2>
 
@@ -84,7 +84,6 @@
 	?>
 	
 	</table>
-	</div>
 
 
 
