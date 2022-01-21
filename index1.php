@@ -3,7 +3,7 @@
 <title>カフェショップ</title>
 
 
-<link rel="stylesheet" href="css/style1.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -45,12 +45,7 @@
 </div>
 
 <aside id="mainimg">
-<div class="slide0">slide0</div>
-</aside>
-
-<aside id="mainimg">
-<div class="slide0">slide0</div>
-<div class="slide0">slide1</div>
+<div class="slide-sub1">slide-sub1</div>
 </aside>
 
 </body>
