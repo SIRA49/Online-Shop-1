@@ -500,5 +500,6 @@ dl.menu dd {
   }
 
   #main img.small {
-	width: 180px;
+	width: 100%;
+	height: 130px;
   }
