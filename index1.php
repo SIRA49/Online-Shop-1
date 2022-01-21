@@ -7,8 +7,7 @@
 
 </head>
 
-<body class="home">
-
+<body>
 <header>
 <h1 id="logo"><a href="index1.php"><img src="images/logo.png" alt=""></a></h1>
 
