@@ -327,6 +327,15 @@ dl.menu dd .price {
 	float: right;	
 }
 
+table.menu{
+   border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 800px;
+  text-align: center;
+}
+
+
 
 .look {background: rgba(0,0,0,0.5);border: 1px solid rgba(255,255,255,0.3);padding: 5px 10px;border-radius: 4px;}
 .mb15,.mb1em {margin-bottom: 15px;}
@@ -353,7 +362,7 @@ img.fl {float: left;margin: 10px;}
 
 @media screen and (max-width:900px){
 
-}
+
 
 
 
@@ -361,6 +370,8 @@ img.fl {float: left;margin: 10px;}
 	width: 94%;	
 	left: 3%;	
 }
+
+
 
 
 
@@ -408,6 +419,7 @@ body {
 	padding: 0;
 }
 
+
 #main p {
 	padding: 0px 0px 20px;	
 }
@@ -440,6 +452,8 @@ body {
 	width: auto;
 	padding: 5px;
 }
+
+
 
 
 

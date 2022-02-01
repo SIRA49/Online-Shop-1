@@ -1,3 +1,17 @@
+<?php
+  session_start();
+  $dnameErr = "";
+  if (isset($_SESSION['errMsg']['dname'])) {
+    $dnameErr = "<span style='color: red;'>" . $_SESSION['errMsg']['dname'] ."</span>";
+  }
+  unset($_SESSION['errMsg']); // すべてのエラーメッセージをクリア
+
+  $dname = "";
+  if (isset($_SESSION['dname']) == true) {
+      $dname = $_SESSION['dname'];
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,7 +28,7 @@
 <header>
 <h1 id="logo"><a href="index1.php"><img src="images/logo.png" alt=""></a></h1>
 
-<?php include("./topmenu.php"); ?>  
+<?php include("./topmenu.php"); ?>
 
 <ul class="icon">
 <li><a href="#"><img src="images/icon_facebook.png" alt="Facebook"></a></li>
@@ -34,25 +48,29 @@
 
 <h2>ご予約・お問い合わせ</h2>
 
-
+<form method="post" action="add.php" >
 <table class="ta1">
 <tr>
 <th>お名前※</th>
-<td><input type="text" name="お名前" size="30" class="ws"></td>
+<td><input type="text" name="dname" required size="30" class="ws"></td>
 </tr>
 <tr>
+<th>電話番号※</th>
+<td><input type="text" name="dtelno" required size="30" class="ws"></td>
+</tr>
 <th>メールアドレス※</th>
-<td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+<td><input type="text" name="dmail" required size="30" class="ws"></td>
 </tr>
 <tr>
-<th>お問い合わせ詳細※</th>
-<td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>
+<th>お問い合わせ詳細</th>
+<td><textarea name="message" cols="30" rows="10" class="wl"></textarea></td>
 </tr>
 </table>
-
 <p class="c">
-<input type="submit" value="内容を確認する" class="btn">
+    <input class="btn" type="submit" value="内容確認" />
+    <input class="btn" type="button" value="前の画面に戻る" onclick="history.back();" />
 </p>
+  </form>
 
 </section>
 
