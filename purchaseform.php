@@ -1,15 +1,11 @@
 <?php
-  session_start();
-  $dnameErr = "";
-  if (isset($_SESSION['errMsg']['dname'])) {
-    $dnameErr = "<span style='color: red;'>" . $_SESSION['errMsg']['dname'] ."</span>";
+  $rno = htmlspecialchars($_GET["rno"]);
+  require_once('./dbConfig.php');
+  $link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+  if ($link == null) {
+    die("接続に失敗しました");
   }
-  unset($_SESSION['errMsg']); // すべてのエラーメッセージをクリア
-
-  $dname = "";
-  if (isset($_SESSION['dname']) == true) {
-      $dname = $_SESSION['dname'];
-  }
+  mysqli_set_charset($link, "utf8");
 ?>
 
 <!DOCTYPE html>
