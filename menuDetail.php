@@ -47,10 +47,8 @@ session_start();
         AND cafe.product_no = {$rno}"; 
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-  $Name = $row['bean_name']
+  $Name = $row['bean_name'];
   $_SESSION['be'] = $Name;
-  $phpVariable = "Dog";
-$_SESSION['animal'] = $phpVariable;
 ?>
 
       <section>
