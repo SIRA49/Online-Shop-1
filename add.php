@@ -108,6 +108,7 @@ try {
 
 <p>お問い合わせを送信しました。<br>
 	 <a href='index1.php'>トップページへ戻る</a>;
+	 <?php echo $Name; ?>
 </p>
 
 </section>
