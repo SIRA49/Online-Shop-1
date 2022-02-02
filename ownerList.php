@@ -71,7 +71,7 @@ try {
 		echo "<tr>\n";
 		echo "<td>" . htmlspecialchars($row['name'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "<td>" . htmlspecialchars($row['tell'],ENT_QUOTES,'UTF-8') . "</td>\n";
-		echo "<td>" . htmlspecialchars($row['mail'],ENT_QUOTES,'UTF-8') . "</td>\n";
+		echo "<td>" . htmlspecialchars($row['mail'],ENT_QUOTES,'UTF-8') . "</td>\n";<br>
 		echo "<td>" . htmlspecialchars($row['address'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "<td>" . htmlspecialchars($row['bean'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "<td>" . htmlspecialchars($row['Time'],ENT_QUOTES,'UTF-8') . "</td>\n";
