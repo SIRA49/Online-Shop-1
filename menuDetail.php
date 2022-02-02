@@ -40,12 +40,15 @@
 
 
 <?php
+session_start();
   $sql = "SELECT bean_name, information, main_image, image1,
           type_name, price  FROM cafe, cafe_type  
         WHERE cafe.type_id = cafe_type.type_id  
         AND cafe.product_no = {$rno}"; 
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $Name = $row['bean_name']
+  $_SESSION['beanname'] = $Name;
 ?>
 
       <section>
