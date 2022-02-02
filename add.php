@@ -1,5 +1,5 @@
 ﻿<?php
-
+session_start();
 $user = 'shiratake';
 $pass = 'pass';
 //データベースの設定を読み込む
@@ -9,8 +9,7 @@ require_once 'dbconfig.php';
 $dname = $_POST['dname'];
 $dtelno = $_POST['dtelno'];
 $dmail = $_POST['dmail'];
-$message = $_POST['message'];
-			
+$message = $_POST['message'];			
 $timestamp = time() ;
 $Time = date( "Y-m-d" , $timestamp ) ;
 //try?catchにてエラーハンドリングを行う。
