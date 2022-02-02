@@ -48,7 +48,7 @@ session_start();
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
   $Name = $row['bean_name']
-  $_SESSION['beanname'] = $Name;
+  $_SESSION['be'] = $Name;
   $phpVariable = "Dog";
 $_SESSION['animal'] = $phpVariable;
 ?>
