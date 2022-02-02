@@ -42,6 +42,15 @@
 
 <div id="main">
 
+<?php
+  $sql = "SELECT bean_name, information, main_image, image1,
+          type_name, price  FROM cafe, cafe_type  
+        WHERE cafe.type_id = cafe_type.type_id  
+        AND cafe.product_no = {$rno}"; 
+  $result = mysqli_query($link, $sql);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+?>
+
 <section>
 
 
@@ -67,6 +76,8 @@
 </tr>
 <th>支払方法</th>
 <td>代引きのみ</td>
+<th>購入商品</th>
+<td><?php echo $row['bean_name']; ?></td>
 </tr>
 </table>
 <p class="c">

@@ -50,7 +50,7 @@
 
       <section>
         <form method="post" action="purchaseform.php" >
-          <h2>お部屋の詳細</h2>
+          <h2>豆の詳細</h2>
           <h3>『<?php echo $row['bean_name']; ?>』</h3>
           <p>
 <?php echo $row['information']; ?>
