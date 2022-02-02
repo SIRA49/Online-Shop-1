@@ -47,7 +47,7 @@ try {
 
 	
 	//INSERT用のSQLを生成
-	$sql = "INSERT INTO purchase (name,tell,mail,address,name,Time) VALUES ( ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO purchase (name,tell,mail,address,bean,Time) VALUES ( ?, ?, ?, ?, ?, ?)";
 	//SQL実行の準備
 	$stmt = $dbh->prepare($sql);
 	//bindValueにてSQLに値を組み込む
