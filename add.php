@@ -10,7 +10,7 @@ $dname = $_POST['dname'];
 $dtelno = $_POST['dtelno'];
 $dmail = $_POST['dmail'];
 $message = $_POST['message'];
-
+			
 $timestamp = time() ;
 $Time = date( "Y-m-d" , $timestamp ) ;
 //try?catchにてエラーハンドリングを行う。
