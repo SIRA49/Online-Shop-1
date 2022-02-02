@@ -16,7 +16,7 @@
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
   $Name = $row['bean_name'];
-
+  $value = $_SESSION['animal'];
 ?>
 
 
@@ -55,7 +55,7 @@ try {
 	$stmt->bindValue(2, $dtelno, PDO::PARAM_STR);
 	$stmt->bindValue(3, $dmail, PDO::PARAM_STR);
 	$stmt->bindValue(4, $daddress, PDO::PARAM_STR);
-	$stmt->bindValue(5, $Name, PDO::PARAM_STR);
+	$stmt->bindValue(5, $value, PDO::PARAM_STR);
 	$stmt->bindValue(6, $Time, PDO::PARAM_INT);
 	//SQLの実行
 	$stmt->execute();
