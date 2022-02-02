@@ -15,7 +15,7 @@
   $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-  $Name = $row['bean_name'];
+  $Name = $_POST['bean_name'];
   if (isset($_SESSION['reserve']['dname']) == true) {
       $dname = $_SESSION['reserve']['dname'];
   }
