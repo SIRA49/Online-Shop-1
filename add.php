@@ -37,7 +37,7 @@ try {
 	$stmt->bindValue(2, $dtelno, PDO::PARAM_STR);
 	$stmt->bindValue(3, $dmail, PDO::PARAM_STR);
 	$stmt->bindValue(4, $message, PDO::PARAM_STR);
-	$stmt->bindValue(5, $message, PDO::PARAM_STR);
+	$stmt->bindValue(5, $Name, PDO::PARAM_STR);
 	$stmt->bindValue(6, $Time, PDO::PARAM_INT);
 	//SQLの実行
 	$stmt->execute();
