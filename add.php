@@ -1,27 +1,4 @@
 ﻿<?php
-  session_start();
-  $dnameErr = "";
-  if (isset($_SESSION['errMsg']['dname'])) {
-    $dnameErr = "<span style='color: red;'>" . $_SESSION['errMsg']['dname'] ."</span>";
-  }
-  unset($_SESSION['errMsg']); // すべてのエラーメッセージをクリア
-  require_once('./dbConfig.php');
-  $link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-  if ($link == null) {
-    die("接続に失敗しました：" . mysqli_connect_error());
-  }
-  mysqli_set_charset($link, "utf8");
-
-  $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
-  $result = mysqli_query($link, $sql);
-  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-  $Name = $row['bean_name'];
-  if (isset($_SESSION['reserve']['dname']) == true) {
-      $dname = $_SESSION['reserve']['dname'];
-  }
-?>
-
-<?php
 
 $user = 'shiratake';
 $pass = 'pass';
@@ -69,6 +46,29 @@ try {
 	//処理の終了
 	die();
 }
+?>
+
+<?php
+  session_start();
+  $dnameErr = "";
+  if (isset($_SESSION['errMsg']['dname'])) {
+    $dnameErr = "<span style='color: red;'>" . $_SESSION['errMsg']['dname'] ."</span>";
+  }
+  unset($_SESSION['errMsg']); // すべてのエラーメッセージをクリア
+  require_once('./dbConfig.php');
+  $link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+  if ($link == null) {
+    die("接続に失敗しました：" . mysqli_connect_error());
+  }
+  mysqli_set_charset($link, "utf8");
+
+  $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
+  $result = mysqli_query($link, $sql);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $Name = $row['bean_name'];
+  if (isset($_SESSION['reserve']['dname']) == true) {
+      $dname = $_SESSION['reserve']['dname'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
