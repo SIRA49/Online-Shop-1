@@ -23,6 +23,11 @@ try {
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	$sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
+	$result = mysqli_query($link, $sql);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$Name = $row['bean_name'];
+
 	//INSERT用のSQLを生成
 	$sql = "INSERT INTO inquiry (name,tell,address,message,Time) VALUES (?, ?, ?, ?, ?)";
 	//SQL実行の準備
