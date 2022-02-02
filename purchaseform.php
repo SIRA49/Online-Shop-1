@@ -15,7 +15,7 @@
   $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-  $roomName = $row['bean_name'];
+  $Name = $row['bean_name'];
   if (isset($_SESSION['reserve']['dname']) == true) {
       $dname = $_SESSION['reserve']['dname'];
   }
@@ -77,7 +77,7 @@
 <th>支払方法</th>
 <td>代引きのみ</td>
 <th>購入商品</th>
-<td></td>
+<td><?php echo $Name; ?></td>
 </tr>
 </table>
 <p class="c">
