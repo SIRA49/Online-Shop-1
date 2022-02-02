@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2022 年 2 朁E01 日 19:45
+-- Generation Time: 2022 年 2 朁E02 日 14:00
 -- サーバのバージョン： 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -119,32 +119,7 @@ CREATE TABLE `inquiry` (
 --
 
 INSERT INTO `inquiry` (`name`, `tell`, `address`, `message`, `Time`) VALUES
-('', '0', '0', '', '0000-00-00'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', '', '', '2022-02-01'),
-('b', '0', '', '', '2022-02-01'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', 'a', 'a', '2022-02-01'),
-('a', 'a', 'a', 'aa', '2022-02-01');
-
--- --------------------------------------------------------
-
---
--- テーブルの構造 `order`
---
-
-CREATE TABLE `order` (
-  `reserve_no` int(11) NOT NULL,
-  `reserve_date` datetime NOT NULL,
-  `product_no` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `numbers` int(11) NOT NULL,
-  `checkin_time` char(5) COLLATE utf8_bin NOT NULL,
-  `message` varchar(255) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+('シラタケリュウヤ', '+818062415359', 'akurozlike@gmail.com', 'あｋんｆｋなｆｆ', '2022-02-02');
 
 -- --------------------------------------------------------
 
@@ -153,10 +128,11 @@ CREATE TABLE `order` (
 --
 
 CREATE TABLE `purchase` (
-  `name` varchar(50) NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `tell` varchar(50) NOT NULL,
   `mail` varchar(50) NOT NULL,
-  `address` varchar(50) NOT NULL,
+  `address` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `bean` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `Time` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -164,10 +140,8 @@ CREATE TABLE `purchase` (
 -- テーブルのデータのダンプ `purchase`
 --
 
-INSERT INTO `purchase` (`name`, `tell`, `mail`, `address`, `Time`) VALUES
-('', '', '', '', '0000-00-00'),
-('a', 'a', 'a', 'aa', '2022-02-01'),
-('b', 'a', 'a', 'aa', '2022-02-01');
+INSERT INTO `purchase` (`name`, `tell`, `mail`, `address`, `bean`, `Time`) VALUES
+('シラタケリュウヤ', '+818062415359', 'akurozlike@gmail.com', '4丁目91-7', '自家製ブレンド', '2022-02-02');
 
 --
 -- Indexes for dumped tables
@@ -193,14 +167,6 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`customer_id`);
 
 --
--- Indexes for table `order`
---
-ALTER TABLE `order`
-  ADD PRIMARY KEY (`reserve_no`),
-  ADD KEY `FK_reserve_0` (`product_no`),
-  ADD KEY `FK_reserve_1` (`customer_id`);
-
---
 -- ダンプしたテーブルの制約
 --
 
@@ -209,13 +175,6 @@ ALTER TABLE `order`
 --
 ALTER TABLE `cafe`
   ADD CONSTRAINT `FK_room_0` FOREIGN KEY (`type_id`) REFERENCES `cafe_type` (`type_id`);
-
---
--- テーブルの制約 `order`
---
-ALTER TABLE `order`
-  ADD CONSTRAINT `FK_reserve_0` FOREIGN KEY (`product_no`) REFERENCES `cafe` (`product_no`),
-  ADD CONSTRAINT `FK_reserve_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
