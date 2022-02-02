@@ -11,7 +11,7 @@
     die("接続に失敗しました：" . mysqli_connect_error());
   }
   mysqli_set_charset($link, "utf8");
-  $roomNo = $_GET['rno'];
+
   $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
