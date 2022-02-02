@@ -64,7 +64,7 @@ try {
     //テーブル部分のHTMLを生成
 	echo "<table border='1' class='menu'align='center'>\n";
 	echo "<tr>\n";
-	echo "<th >名前</th><th>電話番号</th><th>メールアドレス</th><th>住所</th><th>日付</th>\n";
+	echo "<th >名前</th><th>電話番号</th><th>メールアドレス</th><th>住所</th><th>商品</th><th>日付</th>\n";
 	echo "</tr>\n";
     //ループ処理の開始
     foreach ($result as $row) {
@@ -73,7 +73,8 @@ try {
 		echo "<td>" . htmlspecialchars($row['tell'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "<td>" . htmlspecialchars($row['mail'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "<td>" . htmlspecialchars($row['address'],ENT_QUOTES,'UTF-8') . "</td>\n";
-        echo "<td>" . htmlspecialchars($row['Time'],ENT_QUOTES,'UTF-8') . "</td>\n";
+		echo "<td>" . htmlspecialchars($row['bean'],ENT_QUOTES,'UTF-8') . "</td>\n";
+		echo "<td>" . htmlspecialchars($row['Time'],ENT_QUOTES,'UTF-8') . "</td>\n";
 		echo "</tr>\n";
 	//ループ処理の終了
 	}
