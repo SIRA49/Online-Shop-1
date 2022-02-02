@@ -104,11 +104,11 @@ try {
 
 
 
-<h2>ご予約・お問い合わせ</h2>
+<h2>ご予約・お問い合わせ<?php echo $Name; ?></h2>
 
 <p>お問い合わせを送信しました。<br>
 	 <a href='index1.php'>トップページへ戻る</a>;
-	 <?php echo $Name; ?>
+	
 </p>
 
 </section>
