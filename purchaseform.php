@@ -1,11 +1,24 @@
 <?php
-  $rno = htmlspecialchars($_GET["rno"]);
+  session_start();
+  $dnameErr = "";
+  if (isset($_SESSION['errMsg']['dname'])) {
+    $dnameErr = "<span style='color: red;'>" . $_SESSION['errMsg']['dname'] ."</span>";
+  }
+  unset($_SESSION['errMsg']); // すべてのエラーメッセージをクリア
   require_once('./dbConfig.php');
   $link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
   if ($link == null) {
-    die("接続に失敗しました");
+    die("接続に失敗しました：" . mysqli_connect_error());
   }
   mysqli_set_charset($link, "utf8");
+  $roomNo = $_GET['rno'];
+  $sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
+  $result = mysqli_query($link, $sql);
+  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+  $roomName = $row['bean_name'];
+  if (isset($_SESSION['reserve']['dname']) == true) {
+      $dname = $_SESSION['reserve']['dname'];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -38,15 +51,6 @@
 
 <div id="main">
 
-<?php
-  $sql = "SELECT bean_name, information, main_image, image1,
-          type_name, price  FROM cafe, cafe_type  
-        WHERE cafe.type_id = cafe_type.type_id  
-        AND cafe.product_no = {$rno}"; 
-  $result = mysqli_query($link, $sql);
-  $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-?>
-
 <section>
 
 
@@ -73,7 +77,7 @@
 <th>支払方法</th>
 <td>代引きのみ</td>
 <th>購入商品</th>
-<td><?php echo $row['bean_name']; ?></td>
+<td></td>
 </tr>
 </table>
 <p class="c">
