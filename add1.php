@@ -23,21 +23,9 @@ try {
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	session_start();
-	require_once('./dbConfig.php');
-	$link = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-	if ($link == null) {
-	  die("接続に失敗しました：" . mysqli_connect_error());
-	}
-	mysqli_set_charset($link, "utf8");
-  
-	$sql = "SELECT bean_name  FROM cafe,cafe_type  WHERE  cafe.type_id = cafe_type.type_id";
-	$result = mysqli_query($link, $sql);
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$Name = $row['bean_name'];
-
+	
 	//INSERT用のSQLを生成
-	$sql = "INSERT INTO purchase (name,tell,mail,address,bean,Time) VALUES ( ?, ?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO purchase (name,tell,mail,address,Time) VALUES (?, ?, ?, ?, ?)";
 	//SQL実行の準備
 	$stmt = $dbh->prepare($sql);
 	//bindValueにてSQLに値を組み込む
@@ -45,7 +33,6 @@ try {
 	$stmt->bindValue(2, $dtelno, PDO::PARAM_STR);
 	$stmt->bindValue(3, $dmail, PDO::PARAM_STR);
 	$stmt->bindValue(4, $daddress, PDO::PARAM_STR);
-	$stmt->bindValue(4, $Name, PDO::PARAM_STR);
 	$stmt->bindValue(5, $Time, PDO::PARAM_INT);
 	//SQLの実行
 	$stmt->execute();
