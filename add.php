@@ -29,7 +29,7 @@ try {
 	$Name = $row['bean_name'];
 
 	//INSERT用のSQLを生成
-	$sql = "INSERT INTO inquiry (name,tell,address,message,Time) VALUES (?, ?, ?, ?, ?)";
+	$sql = "INSERT INTO inquiry (name,tell,address,message,bean,Time) VALUES ( ?, ?, ?, ?, ?, ?)";
 	//SQL実行の準備
 	$stmt = $dbh->prepare($sql);
 	//bindValueにてSQLに値を組み込む
@@ -37,7 +37,8 @@ try {
 	$stmt->bindValue(2, $dtelno, PDO::PARAM_STR);
 	$stmt->bindValue(3, $dmail, PDO::PARAM_STR);
 	$stmt->bindValue(4, $message, PDO::PARAM_STR);
-	$stmt->bindValue(5, $Time, PDO::PARAM_INT);
+	$stmt->bindValue(5, $message, PDO::PARAM_STR);
+	$stmt->bindValue(6, $Time, PDO::PARAM_INT);
 	//SQLの実行
 	$stmt->execute();
 	//接続を閉じる
