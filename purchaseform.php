@@ -74,8 +74,11 @@
 <th>住所※</th>
 <td><input type="text" name="address" required size="50" class="ws"></td>
 </tr>
+<tr>
 <th>支払方法</th>
 <td>代引きのみ</td>
+</tr>
+<tr>
 <th>購入商品</th>
 <td><?php echo $Name; ?></td>
 </tr>
