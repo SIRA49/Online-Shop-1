@@ -32,7 +32,7 @@ $dname = $_POST['dname'];
 $dtelno = $_POST['dtelno'];
 $dmail = $_POST['dmail'];
 $daddress = $_POST['address'];
-
+$b        =$_POST['bean_name'];
 $timestamp = time() ;
 $Time = date( "Y-m-d" , $timestamp ) ;
 //try?catchにてエラーハンドリングを行う。
